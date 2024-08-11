@@ -1,0 +1,7 @@
+@import './mixins/dev/dev-global-after-width.scss';
+@import './mixins/dev/dev-global-media-schems.scss';
+
+.dev_body {
+    @include dev-global-after-width;
+    @include dev-global-media-schems;
+}

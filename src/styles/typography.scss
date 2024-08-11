@@ -1,0 +1,66 @@
+h1,
+h2,
+h3,
+p,
+ul,
+li,
+span,
+p {
+    line-height: 1;
+}
+
+a {
+    text-decoration: none;
+    color: var(--base-color);
+}
+
+button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    border: 0;
+    border-radius: 0;
+    background: var(--base-color);
+    color: var(--prime-color);
+
+    font-size: 1rem;
+    padding-block: 0px;
+    padding-inline: 0px;
+
+    user-select: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1rem;
+
+    min-width: 100px;
+    font-family: inherit;
+    cursor: pointer;
+
+    &:hover {
+        background: #1d49aa;
+    }
+
+    &:focus { 
+        outline: none;
+        box-shadow: 0 0 0 4px green;
+    }
+
+    &:active {
+        box-shadow: 0 0 0 4px red;
+    }
+
+    &[disabled] {
+        color: #d2d5db;
+        background: #6c7589;
+        cursor: not-allowed;
+    }
+}
+
+svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}

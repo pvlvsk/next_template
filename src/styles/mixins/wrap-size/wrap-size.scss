@@ -1,0 +1,59 @@
+@import '../../variables/viewportWidth.scss';
+
+@mixin wrap-size() {
+    width: 300px;
+    border: 1px dashed red;
+    
+
+    @media (max-width: $mobile_320px) {
+        // mobile_1
+        width: calc($mobile_320px - var(--space-unit) * 2);
+    }
+
+    @media (min-width: calc($mobile_320px + 1px)) and (max-width: $mobile_400px) {
+        // mobile_2
+        width: calc($mobile_320px - var(--space-unit));
+    }
+
+
+    @media (min-width: calc($mobile_400px + 1px)) and (max-width: $mobile_480px) {
+        // mobile_3
+        width: calc($mobile_400px - var(--space-unit));
+    }
+
+    @media (min-width: calc($mobile_480px + 1px)) and (max-width: $mobile_767px) {
+        // mobile_4
+        width: calc($mobile_480px - var(--space-unit));
+    }
+
+    @media (min-width: $tablet_768px) and (max-width: $tablet_912px) {
+        // tablet_1
+        width: calc($tablet_768px - var(--space-unit) * 2);
+    }
+
+    @media (min-width: calc($tablet_912px + 1px)) and (max-width: $tablet_1024px) {
+        // tablet_2
+        width: calc($tablet_912px - var(--space-unit) * 2);
+    }
+
+    @media (min-width: calc($tablet_1024px + 1px)) and (max-width: $tablet_1279px) {
+        // tablet_3
+        width: calc($tablet_1024px - var(--space-unit) * 2);
+    }
+
+    @media (min-width: $desctop_1280px) and (max-width: $desctop_1600px) {
+        // desctop_1
+        width: calc($desctop_1280px - var(--space-unit) * 2);
+    }
+
+    @media (min-width: calc($desctop_1600px + 1px)) and (max-width: $desctop_1920px) {
+        // desctop_2
+        width: calc($desctop_1600px - var(--space-unit) * 4);
+    }
+
+    @media (min-width: calc($desctop_1920px + 1px)) {
+        // desctop_3
+        width: calc($desctop_1920px - var(--space-unit) * 4);
+    }
+
+}

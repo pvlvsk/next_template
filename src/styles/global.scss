@@ -1,0 +1,41 @@
+@import './variables.scss';
+@import './typography.scss';
+@import './variables/color.css';
+@import './variables/typography.css';
+@import './variables/space.css';
+@import './variables/z-indexs.css';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-weight: 400;
+    font-style: normal;
+
+    border: none;
+
+    text-decoration: none;
+}
+
+
+html {
+    display: flex;
+    width: 100vw;
+    overflow-x: hidden;
+
+    @include font-size;
+    @include scrollbar;
+}
+
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+
+    @include animations();
+
+    color: var(--color-primary);
+    z-index: var(--z-index-1);
+}

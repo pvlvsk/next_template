@@ -1,0 +1,107 @@
+@import '../../variables/viewportWidth.scss';
+
+@mixin dev-global-after-width() {
+    position: relative;
+
+    &::after {
+        content: '';
+        position: fixed;
+        right: 0;
+        bottom: 20px;
+        display: flex;
+        padding: 0 8px;
+        border: 2px dashed red;
+        align-items: center;
+        justify-content: center;
+        opacity: 0.4;
+    }
+
+    &::before {
+        content: '';
+        position: fixed;
+        bottom: 0px;
+        height: 2px;
+    }
+
+    @media (max-width: $mobile_320px) {
+
+        // mobile_1
+        &::after {
+            content: '< 320px / mobile_1';
+        }
+    }
+
+    @media (min-width: calc($mobile_320px + 1px)) and (max-width: $mobile_400px) {
+
+        // mobile_2
+        &::after {
+            content: '321px х 400px /  mobile_2';
+        }
+    }
+
+
+    @media (min-width: calc($mobile_400px + 1px)) and (max-width: $mobile_480px) {
+
+        // mobile_3
+        &::after {
+            content: '401px х 480px / mobile_3';
+        }
+    }
+
+    @media (min-width: calc($mobile_480px + 1px)) and (max-width: $mobile_767px) {
+
+        // mobile_4
+        &::after {
+            content: '481px х 767px / mobile_4';
+        }
+    }
+
+    @media (min-width: $tablet_768px) and (max-width: $tablet_912px) {
+
+        // tablet_1
+        &::after {
+            content: '768px х 912px / tablet_1';
+        }
+    }
+
+    @media (min-width: calc($tablet_912px + 1px)) and (max-width: $tablet_1024px) {
+
+        // tablet_2
+        &::after {
+            content: '913px х 1024px / tablet_2';
+        }
+    }
+
+    @media (min-width: calc($tablet_1024px + 1px)) and (max-width: $tablet_1279px) {
+
+        // tablet_3
+        &::after {
+            content: '1025px х 1279px / tablet_3';
+        }
+    }
+
+    @media (min-width: $desctop_1280px) and (max-width: $desctop_1600px) {
+
+        // desctop_1
+        &::after {
+            content: '1280px х 1600px / desctop_1 ';
+        }
+    }
+
+    @media (min-width: calc($desctop_1600px + 1px)) and (max-width: $desctop_1920px) {
+
+        // desctop_2
+        &::after {
+            content: '1601px х 1920px / desctop_2';
+        }
+    }
+
+    @media (min-width: calc($desctop_1920px + 1px)) {
+
+        // desctop_3
+        &::after {
+            content: '> 1921px / desctop_3';
+        }
+    }
+
+}

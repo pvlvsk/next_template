@@ -1,0 +1,8 @@
+:root,
+[data-theme="light"] {
+    --color-primary: blue;
+}
+
+[data-theme="dark"] {
+    --color-primary: red;
+}

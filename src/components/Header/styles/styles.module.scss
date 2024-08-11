@@ -1,0 +1,15 @@
+@import '../../../styles/variables.scss';
+
+.header {
+    border: 1px dashed green;
+    z-index: var(--z-index-1);
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+
+    &__wrap {
+        @include wrap-size;
+        @include headerHeight;
+    }
+}
